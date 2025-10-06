@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../styles/Layouts/Header.css";
 import { Bell, Folder, CheckCircle, UserCircle, XCircle, DotsThree } from "@phosphor-icons/react";
 
-import logo from "../assets/Logo.png"; // ajuste o caminho se necessário
+import logo from "../assets/Logo.png";
 
 export default function Header({ isAdmin = true, userName = "Informática" }) {
     const [active, setActive] = useState("Chamados");
