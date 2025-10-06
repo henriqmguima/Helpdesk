@@ -1,0 +1,7 @@
+.aside-dev {
+    background: var(--azul-raf);
+    color: var(--branco);
+    padding: 1rem;
+    border-radius: 8px;
+    width: 200px;
+}

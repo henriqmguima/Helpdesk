@@ -1,42 +1,97 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* ===== Estilo do App geral ===== */
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* ===== MENU FIXO INFERIOR ===== */
+.dev-menu {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-top: 1px solid var(--azul-claro);
+  background: transparent;
+  backdrop-filter: blur(6px);
+  font-family: "Inter", sans-serif;
+  z-index: 50;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.dev-menu a {
+  color: var(--azul-raf);
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+  font-size: 0.95rem;
+  border-radius: 5px;
+  padding: 0.5rem;
 }
 
-.card {
-  padding: 2em;
+.dev-menu a:hover {
+  color: var(--azul-bondi);
 }
 
-.read-the-docs {
-  color: #888;
+.dev-menu a.active {
+  background-color: var(--laranja);
+  font-weight: 700;
+  color: var(--branco);
+}
+
+/* ===== SUBMENU COMPONENTES ===== */
+.submenu {
+  position: relative;
+  cursor: pointer;
+}
+
+.submenu summary {
+  list-style: none;
+  font-weight: 600;
+  color: var(--azul-raf);
+}
+
+.submenu summary::marker {
+  display: none;
+}
+
+.submenu-content {
+  position: absolute;
+  bottom: 2.5rem;
+  left: -2rem;
+  display: flex;
+  flex-direction: column;
+  background: var(--branco);
+  border: 1px solid var(--azul-claro);
+  border-radius: 10px;
+  padding: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.submenu-content a {
+  padding: 0.4rem 0.8rem;
+  color: var(--azul-raf);
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+.submenu-content a:hover {
+  background: var(--azul-claro);
+  color: var(--branco);
+}
+
+.submenu-content a.active {
+  background: var(--laranja);
+  color: var(--branco);
+}
+
+/* ===== Ajuste visual para evitar sobreposição ===== */
+.app {
+  padding-bottom: 70px;
+  /* espaço pro menu fixo */
 }
