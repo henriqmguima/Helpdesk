@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../styles/Layouts/Header.css";
 import { Bell, Folder, CheckCircle, UserCircle, XCircle, DotsThree } from "@phosphor-icons/react";
 
-import logo from "../assets/Logo.png"; // ajuste o caminho se necessário
+import logo from "../assets/Logo.png";
 
 export default function Header({ isAdmin = true, userName = "Informática" }) {
     const [active, setActive] = useState("Chamados");
@@ -44,7 +44,7 @@ export default function Header({ isAdmin = true, userName = "Informática" }) {
                     onClick={() => setActive("Perfil")}
                 >
                     <UserCircle size={35} weight="fill" color="#fff" className="icon" />
-                    <span className="nav-item responsive">PERFIL</span>
+                    <span className="responsive">PERFIL</span>
                     <small>{userName}</small>
                 </div>
 
@@ -54,7 +54,7 @@ export default function Header({ isAdmin = true, userName = "Informática" }) {
                         }`}
                     onClick={() => setActive("Notificações")}
                 >
-                    <span className="nav-item responsive">NOTIFICAÇÕES</span>
+                    <span className="responsive">NOTIFICAÇÕES</span>
                     <Bell size={30} weight="fill" className="icon" />
                 </div>
             </nav>
