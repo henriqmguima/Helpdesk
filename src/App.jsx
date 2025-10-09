@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router-dom";
 import Home from "./pages/Index";
-import ModalIndex from "./pages/modalIndex";
+import ModalIndex from "./pages/ModalIndex";
 import Setores from "./pages/admin/Setores";
 import Chamados from "./pages/admin/Chamados/Index";
 import Historico from "./pages/admin/Chamados/Historico";
