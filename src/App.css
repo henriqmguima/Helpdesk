@@ -43,23 +43,27 @@
   color: var(--branco);
 }
 
-/* ===== SUBMENU COMPONENTES ===== */
-.submenu {
+
+
+
+
+/* ===== menu2 COMPONENTES ===== */
+.menu2 {
   position: relative;
   cursor: pointer;
 }
 
-.submenu summary {
+.menu2 summary {
   list-style: none;
   font-weight: 600;
   color: var(--azul-raf);
 }
 
-.submenu summary::marker {
+.menu2 summary::marker {
   display: none;
 }
 
-.submenu-content {
+.menu2-content {
   position: absolute;
   bottom: 2.5rem;
   left: -2rem;
@@ -72,7 +76,7 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.submenu-content a {
+.menu2-content a {
   padding: 0.4rem 0.8rem;
   color: var(--azul-raf);
   text-decoration: none;
@@ -80,18 +84,90 @@
   transition: 0.2s;
 }
 
-.submenu-content a:hover {
+.menu2-content a:hover {
   background: var(--azul-claro);
   color: var(--branco);
 }
 
-.submenu-content a.active {
+.menu2-content a.active {
   background: var(--laranja);
   color: var(--branco);
+}
+
+.menu2-content .check .active {
+  background-color: var(--verde) !important;
+  color: white;
+}
+
+.check {
+  background-color: var(--verde);
+  color: white !important;
+  font-weight: 700 !important;
+}
+
+a.check.active {
+  background-color: var(--azul);
+  color: white !important;
+  font-weight: 700 !important;
 }
 
 /* ===== Ajuste visual para evitar sobreposição ===== */
 .app {
   padding-bottom: 70px;
   /* espaço pro menu fixo */
+}
+
+/* ===== DEV-MENU RESPONSIVO ===== */
+@media (max-width: 480px) {
+  .dev-menu {
+    flex-direction: row;
+    gap: 0.2rem;
+    padding: 0.5rem;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(39, 100, 141, 0.95);
+    /* mesma cor do header */
+    border-top: none;
+    backdrop-filter: blur(6px);
+    max-height: 210px;
+    font-size: 0.6rem;
+
+  }
+
+  .dev-menu a {
+    font-size: 0.6rem;
+    padding: 0.4rem 0.6rem;
+    width: 90%;
+    text-align: center;
+    color: white;
+
+  }
+
+  /* Ajuste menu2 (Componentes) */
+  .menu2-content {
+
+    position: static;
+    bottom: auto;
+    left: auto;
+    width: 100%;
+    margin-top: 0.3rem;
+    border: 1px solid var(--azul-claro);
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .menu2 summary {
+    text-align: center;
+    padding: 0.5rem 0;
+    color: white;
+
+  }
+
+  .menu2-content a {
+    width: 100%;
+    padding: 0.4rem 0;
+    text-align: center;
+    color: var(--azul-bondi);
+  }
 }

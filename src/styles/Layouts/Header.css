@@ -74,9 +74,7 @@
 }
 
 .perfil {
-    display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 2px;
 }
 
@@ -90,9 +88,118 @@
 }
 
 
-
 .responsive {
     display: none;
+}
+
+.perfil {
+    max-width: 69.47PX;
+}
+
+.submenu {
+    position: fixed !important;
+    margin-top: 6px;
+}
+
+
+
+/* ===== SUBMENUS ===== */
+
+.notification-wrapper {
+    position: relative;
+}
+
+.perfil-wrapper {
+    position: relative;
+}
+
+/* Forçar o submenu a sair visualmente do header */
+.perfil-menu {
+    position: fixed;
+    /* antes era absolute */
+    top: 70px;
+    /* ajusta conforme a altura do seu header */
+    right: 40px;
+    /* alinha à direita do botão de perfil */
+    background-color: #1e4762;
+    border: 1px solid #3498db;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    min-width: 160px;
+    z-index: 999;
+    /* acima de tudo */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+
+}
+
+.submenu-item {
+    padding: 10px;
+    font-size: 14px;
+    color: #f0f0f0;
+    cursor: pointer;
+    text-align: center;
+    transition: background 0.2s;
+    width: 100%;
+}
+
+.submenu-item:hover {
+    background-color: #2a5d81;
+}
+
+.submenu-item.logout {
+    border-top: 1px solid #3498db;
+}
+
+.notification-box {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #1e4762;
+    border: 1px solid #3498db;
+    border-radius: 8px;
+    min-width: 200px;
+    padding: 10px;
+    z-index: 150;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.notification-box p {
+    margin: 0;
+    text-align: center;
+    color: #ccc;
+    font-size: 14px;
+    text-align: center;
+
+}
+
+/* ======== ANIMAÇÕES DE SUBMENUS ======== */
+
+/* Animação base */
+@keyframes fadeSlideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+        scale: 0.98;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        scale: 1;
+    }
+}
+
+/* PERFIL */
+.perfil-menu {
+    animation: fadeSlideDown 0.25s ease-out forwards;
+    transform-origin: top right;
+}
+
+/* NOTIFICAÇÕES */
+.notification-box {
+    animation: fadeSlideDown 0.25s ease-out forwards;
+    transform-origin: top right;
 }
 
 /* ======= RESPONSIVIDADE ======= */
@@ -203,12 +310,53 @@
         transition: max-height 0.4s ease, padding 0.4s ease;
         z-index: 200;
         margin-top: 5px;
-        border: 1px solid #3498db;
     }
 
     .header-right.open {
         max-height: 500px;
         padding: 10px 0;
+        border: 1px solid #3498db;
+
+    }
+
+    .perfil-wrapper {
+        text-align: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        border-bottom: 1px solid #3498db8c;
+        padding-bottom: 10px;
+    }
+
+    .submenu {
+        position: static !important;
+        width: 90%;
+        display: flex;
+        padding-bottom: 10px !important;
+    }
+
+    .logout {
+        border-top: 1px solid #ecf0f12e !important;
+        padding-top: 10px !important;
+    }
+
+    .config {
+        padding-bottom: 10px !important;
+    }
+
+
+    .perfil-menu {
+        background-color: #27648d !important;
+        padding: 8px 0px !important;
+    }
+
+    .submenu .perfil-menu {
+        background-color: red;
+    }
+
+    .submenu-item {
+        font-size: 12px !important;
     }
 
     .nav-item {
@@ -238,4 +386,22 @@
     .nav-item svg {
         display: none;
     }
+
+    .perfil-menu,
+    .notification-box {
+        position: static;
+        box-shadow: none;
+        border: none;
+        background-color: transparent;
+        padding: 0;
+        text-align: center;
+    }
+
+    .submenu-item {
+        background: none;
+        border: none;
+        padding: 5px;
+    }
+
+
 }

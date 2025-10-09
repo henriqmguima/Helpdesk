@@ -40,19 +40,19 @@ export default function App() {
 
         {/* ====== MENU INFERIOR FIXO ====== */}
         <nav className="dev-menu">
-          <NavLink to="/" end>🏠 Home</NavLink>
-          <NavLink to="/modalIndex">🧩 Modais</NavLink>
-          <NavLink to="/setores">🏢 Setores</NavLink>
-          <NavLink to="/chamados">📋 Chamados</NavLink>
-          <NavLink to="/historico">🕓 Histórico</NavLink>
+          <NavLink to="/" end>Home</NavLink>
+          <NavLink to="/modalIndex">Modais</NavLink>
+          <NavLink to="/setores">Setores</NavLink>
+          <NavLink to="/chamados">Chamados</NavLink>
+          <NavLink to="/historico">Histórico</NavLink>
 
-          {/* Submenu de componentes */}
-          <details className="submenu">
-            <summary>🧱 Componentes</summary>
-            <div className="submenu-content">
-              <NavLink to="/componentes/aside">Aside</NavLink>
+          {/* menu2 de componentes */}
+          <details className="menu2">
+            <summary>Componentes</summary>
+            <div className="menu2-content">
+              <NavLink to="/componentes/aside" className={"check"}>Aside</NavLink>
               <NavLink to="/componentes/footer">Footer</NavLink>
-              <NavLink to="/componentes/header">Header</NavLink>
+              <NavLink to="/componentes/header" className="check">Header</NavLink>
               <NavLink to="/componentes/form">Form</NavLink>
               <NavLink to="/componentes/notification">Notification</NavLink>
               <NavLink to="/componentes/ticket">Ticket</NavLink>
