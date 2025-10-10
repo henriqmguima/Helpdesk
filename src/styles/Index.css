@@ -91,74 +91,6 @@
     font-weight: 600;
 }
 
-/* ===== CARDS ADMIN ===== */
-.cards-admin {
-    display: flex;
-    justify-content: center;
-    gap: 24px;
-    flex-wrap: wrap;
-    padding: 0 20px;
-}
-
-.card-admin {
-    flex: 1 1 280px;
-    max-width: 320px;
-    min-height: 250px;
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
-    text-align: center;
-    background-color: white;
-    transition: transform 0.2s ease;
-}
-
-.card-admin:hover {
-    transform: translateY(-4px);
-}
-
-.card-admin .icon {
-    font-size: 3rem;
-    margin-bottom: 10px;
-}
-
-.card-admin.aberto .icon {
-    color: var(--vermelho);
-}
-
-.card-admin.concluido .icon {
-    color: var(--verde);
-}
-
-.card-admin h3 {
-    margin-bottom: 6px;
-    font-size: 1.2rem;
-}
-
-.card-admin.aberto h3 {
-    color: var(--vermelho);
-}
-
-.card-admin.concluido h3 {
-    color: var(--verde);
-}
-
-.card-admin .data {
-    font-size: 0.9rem;
-    color: var(--cinza-texto);
-    margin-bottom: 8px;
-}
-
-.data {
-    font-weight: 1000;
-}
-
-.card-admin .info {
-    font-size: 0.85rem;
-    color: var(--cinza-texto);
-}
 
 @media (max-width: 1448px) {
     .em-desenvolvimento {
@@ -180,15 +112,7 @@
         font-size: 0.7rem;
     }
 
-    .cards-admin {
-        flex-direction: column;
-        align-items: center;
-    }
 
-    .card-admin {
-        width: 90%;
-        max-width: none;
-    }
 
     .em-desenvolvimento {
         font-size: 3rem;
