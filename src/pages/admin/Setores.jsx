@@ -1,5 +1,5 @@
 import "../../styles/Admin.css";
-import Header from "../../components/Header"; // ajuste o caminho conforme sua pasta
+import Header from "../../components/Header";
 
 export default function Setores() {
     return (

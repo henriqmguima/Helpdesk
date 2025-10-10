@@ -5,6 +5,37 @@
   min-height: 100vh;
 }
 
+.select-user-type {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 24px;
+}
+
+.select-user-type h1 {
+  color: #27648d;
+}
+
+.btn-group {
+  display: flex;
+  gap: 20px;
+}
+
+.btn-select {
+  background-color: #27648d;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-select:hover {
+  background-color: #1c4f70;
+}
+
 /* ===== MENU FIXO INFERIOR ===== */
 .dev-menu {
   position: fixed;

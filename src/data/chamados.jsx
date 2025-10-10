@@ -1,0 +1,26 @@
+export const chamadosMock = [
+    {
+        id: 1,
+        setorImg: "/img/",
+        titulo: "Computador não liga",
+        setor: "Vereador Patrick",
+        perfil: "Patrick",
+        dataHora: "10/10/2025 09:32",
+        urgencia: "Alta",
+        descricaoProblema: "O computador da recepção não liga mesmo após reiniciar o estabilizador.",
+        descricaoSolucao: "(em andamento).",
+        resolvido: false,
+    },
+    {
+        id: 2,
+        setorImg: "/img/",
+        titulo: "Problema no Telefone",
+        setor: "Direção",
+        perfil: "Talles",
+        dataHora: "09/10/2025 15:47",
+        urgencia: "Média",
+        descricaoProblema: "Sistema de ponto apresenta erro ao exportar planilha.",
+        descricaoSolucao: "Aguardando resposta do fornecedor.",
+        resolvido: true,
+    },
+];

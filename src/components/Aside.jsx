@@ -42,9 +42,7 @@ export default function Aside() {
                     </li>
                 ))}
             </ul>
-            <div className="logo-bottom">
-                <img src={logo} alt="Logo Câmara" />
-            </div>
+
         </aside>
     );
 }

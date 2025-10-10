@@ -1,0 +1,188 @@
+.visualizacao-usuario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 16px;
+    margin-top: 0px;
+
+}
+
+.abrir-chamado {
+    margin-bottom: 32px;
+}
+
+.btn-abrir {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--grad-azul-raf);
+    color: var(--branco);
+    border: none;
+    border-radius: 20px;
+    padding: 12px 36px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-abrir:hover {
+    opacity: 0.9;
+    transform: scale(1.02);
+}
+
+.card-chamados {
+    background: var(--branco);
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1500px;
+    padding: 24px;
+    transition: all 0.3s ease;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titulo-card {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--azul-raf);
+}
+
+.titulo-card span {
+    color: var(--azul-bondi);
+    font-size: 1.2rem;
+    margin-left: 6px;
+}
+
+.icone-toggle {
+    cursor: pointer;
+    color: var(--azul-raf);
+    transition: 0.2s;
+}
+
+.icone-toggle:hover {
+    color: var(--azul-bondi);
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 16px 0;
+}
+
+.quantidade-chamados {
+    color: var(--azul-raf);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.filtros {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 24px;
+
+}
+
+.filtro {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.filtro .label {
+    color: var(--cinza);
+    font-weight: 500;
+}
+
+.filtro .valor {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--azul-raf);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.filtro select {
+    border: none;
+    background: transparent;
+    color: var(--azul-raf);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.lista-chamados {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.lado-esquerdo,
+.lado-direito {
+    flex: 1;
+}
+
+.chamado-card {
+    background: var(--branco);
+    color: var(--preto);
+    border-radius: 10px;
+    padding: 16px 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.chamado-topo {
+    font-weight: 600;
+    color: var(--azul-bondi);
+    margin-bottom: 10px;
+}
+
+.chamado-corpo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+}
+
+.titulo-info {
+    font-weight: bold;
+    margin-bottom: 4px;
+    color: var(--azul-raf);
+}
+
+.descricao {
+    font-size: 0.9rem;
+    color: #444;
+    margin-top: 4px;
+}
+
+.icone-visualizar {
+    background: var(--azul-vivo);
+    color: var(--branco);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.icone-visualizar:hover {
+    transform: scale(1.15);
+}
+
+@media (max-width: 768px) {
+    .filtros {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
