@@ -5,7 +5,7 @@ export const chamadosMock = [
         titulo: "Computador não liga",
         setor: "Vereador Patrick",
         perfil: "Patrick",
-        dataHora: "10/10/2025 09:32",
+        dataHora: "2025-10-14T09:32:00", // formato ISO
         urgencia: "Alta",
         descricaoProblema: "O computador da recepção não liga mesmo após reiniciar o estabilizador.",
         descricaoSolucao: "(em andamento).",
@@ -17,10 +17,22 @@ export const chamadosMock = [
         titulo: "Problema no Telefone",
         setor: "Direção",
         perfil: "Talles",
-        dataHora: "09/10/2025 15:47",
+        dataHora: "2025-10-14T15:47:00", // formato ISO
         urgencia: "Média",
         descricaoProblema: "Sistema de ponto apresenta erro ao exportar planilha.",
         descricaoSolucao: "Aguardando resposta do fornecedor.",
+        resolvido: true,
+    },
+    {
+        id: 3,
+        setorImg: "/img/",
+        titulo: "Impressora travada",
+        setor: "Recepção",
+        perfil: "Patrícia",
+        dataHora: "2025-10-14T11:20:00",
+        urgencia: "Baixa",
+        descricaoProblema: "A impressora não finaliza a impressão e dá erro de papel.",
+        descricaoSolucao: "Resolvido após reiniciar.",
         resolvido: true,
     },
 ];

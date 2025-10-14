@@ -1,10 +1,33 @@
-import "../styles/Layouts/Cards.css";
+import { Eye } from "@phosphor-icons/react";
+import "../styles/Layouts/Ticket.css";
 
-export default function Ticket({ titulo = "Chamado #001", status = "Aberto" }) {
+export default function Ticket({ chamado }) {
     return (
-        <div className="ticket-dev">
-            <h3>{titulo}</h3>
-            <span>Status: {status}</span>
+        <div className="chamado-card">
+            <div className="chamado-topo">
+                <strong>
+                    {chamado.titulo.toUpperCase()} | {chamado.dataHora} | {chamado.urgencia.toUpperCase()} URGÊNCIA
+                </strong>
+            </div>
+
+            <div className="chamado-corpo">
+                <div className="lado-esquerdo">
+                    <div className="perfil-ticket">
+                        <p className="titulo-info">PERFIL SOLICITANTE:</p>
+                        <p className="perfil-ticket-p">{chamado.perfil}</p>
+                    </div>
+                    <p className="descricao">{chamado.descricaoProblema}</p>
+                </div>
+
+                <div className="lado-direito">
+                    <p className="titulo-info">STATUS</p>
+                    <p>{chamado.resolvido ? "Concluído" : "Em andamento"}</p>
+                </div>
+
+                <div className="icone-visualizar">
+                    <Eye size={26} weight="fill" />
+                </div>
+            </div>
         </div>
     );
 }

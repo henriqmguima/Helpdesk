@@ -13,7 +13,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Form from "./components/Form";
 import Notification from "./components/Notification";
-import Ticket from "./components/Ticket";
+
 // import UserModal from "./components/UserModal";
 
 import "./App.css";
@@ -52,39 +52,38 @@ export default function App() {
           />
 
           {/* Páginas principais */}
-          <Route path="/home" element={<Home userType={userType} />} />
-          <Route path="/modalIndex" element={<ModalIndex />} />
-          <Route path="/setores" element={<Setores />} />
-          <Route path="/chamados" element={<Chamados />} />
-          <Route path="/historico" element={<Historico />} />
+          <Route path="/Home" element={<Home userType={userType} />} className="check" />
+          <Route path="/ModalIndex" element={<ModalIndex />} />
+          <Route path="/Setores" element={<Setores />} />
+          <Route path="/Chamados" element={<Chamados />} />
+          <Route path="/Historico" element={<Historico />} />
 
           {/* Componentes */}
-          <Route path="/componentes/aside" element={<Aside />} />
-          <Route path="/componentes/footer" element={<Footer />} />
-          <Route path="/componentes/header" element={<Header />} />
-          <Route path="/componentes/form" element={<Form />} />
-          <Route path="/componentes/notification" element={<Notification />} />
-          <Route path="/componentes/ticket" element={<Ticket />} />
+          <Route path="/componentes/Aside" element={<Aside />} />
+          <Route path="/componentes/Footer" element={<Footer />} />
+          <Route path="/componentes/Header" element={<Header />} />
+          <Route path="/componentes/Form" element={<Form />} />
+          <Route path="/componentes/Notification" element={<Notification />} />
           {/* <Route path="/componentes/usermodal" element={<UserModal />} /> */}
         </Routes>
 
         {/* ====== MENU INFERIOR FIXO ====== */}
         <nav className="dev-menu">
-          <NavLink to="/" end>Home</NavLink>
-          <NavLink to="/modalIndex">Modais</NavLink>
-          <NavLink to="/setores">Setores</NavLink>
-          <NavLink to="/chamados">Chamados</NavLink>
-          <NavLink to="/historico">Histórico</NavLink>
+          <NavLink to="/" end className="check">Home</NavLink>
+          <NavLink to="/ModalIndex">Modais</NavLink>
+          <NavLink to="/Setores">Setores</NavLink>
+          <NavLink to="/Chamados">Chamados</NavLink>
+          <NavLink to="/Historico">Histórico</NavLink>
 
           <details className="menu2">
             <summary>Componentes</summary>
             <div className="menu2-content">
-              <NavLink to="/componentes/aside" className="check">Aside</NavLink>
-              <NavLink to="/componentes/footer">Footer</NavLink>
-              <NavLink to="/componentes/header" className="check">Header</NavLink>
-              <NavLink to="/componentes/form">Form</NavLink>
-              <NavLink to="/componentes/notification">Notification</NavLink>
-              <NavLink to="/componentes/ticket">Ticket</NavLink>
+              <NavLink to="/componentes/Aside" className="check">Aside</NavLink>
+              <NavLink to="/componentes/Footer">Footer</NavLink>
+              <NavLink to="/componentes/Header" className="check">Header</NavLink>
+              <NavLink to="/componentes/Form">Form</NavLink>
+              <NavLink to="/componentes/Notification">Notification</NavLink>
+
             </div>
           </details>
         </nav>
