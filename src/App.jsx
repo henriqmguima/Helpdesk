@@ -2,10 +2,14 @@ import { BrowserRouter as Router, Routes, Route, NavLink, useNavigate } from "re
 import { useState } from "react";
 
 import Home from "./pages/Index";
-import ModalIndex from "./pages/ModalIndex";
 import Setores from "./pages/admin/Setores";
 import Chamados from "./pages/admin/Chamados/Index";
 import Historico from "./pages/admin/Chamados/Historico";
+
+// Novos modais
+import ModalPerfil from "./components/modais/ModalPerfil";
+import ModalChamadoUser from "./components/modais/ModalChamadoUser";
+import ModalChamadoAdmin from "./components/modais/ModalChamadoAdmin";
 
 // Componentes
 import Aside from "./components/Aside";
@@ -13,8 +17,6 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Form from "./components/Form";
 import Notification from "./components/Notification";
-
-// import UserModal from "./components/UserModal";
 
 import "./App.css";
 
@@ -52,11 +54,15 @@ export default function App() {
           />
 
           {/* Páginas principais */}
-          <Route path="/Home" element={<Home userType={userType} />} className="check" />
-          <Route path="/ModalIndex" element={<ModalIndex />} />
+          <Route path="/Home" element={<Home userType={userType} />} />
           <Route path="/Setores" element={<Setores />} />
           <Route path="/Chamados" element={<Chamados />} />
           <Route path="/Historico" element={<Historico />} />
+
+          {/* Páginas dos modais */}
+          <Route path="/modais/ModalPerfil" element={<ModalPerfil />} />
+          <Route path="/modais/ModalChamadoUser" element={<ModalChamadoUser />} />
+          <Route path="/modais/ModalChamadoAdmin" element={<ModalChamadoAdmin />} />
 
           {/* Componentes */}
           <Route path="/componentes/Aside" element={<Aside />} />
@@ -64,13 +70,22 @@ export default function App() {
           <Route path="/componentes/Header" element={<Header />} />
           <Route path="/componentes/Form" element={<Form />} />
           <Route path="/componentes/Notification" element={<Notification />} />
-          {/* <Route path="/componentes/usermodal" element={<UserModal />} /> */}
         </Routes>
 
         {/* ====== MENU INFERIOR FIXO ====== */}
         <nav className="dev-menu">
           <NavLink to="/" end className="check">Home</NavLink>
-          <NavLink to="/ModalIndex">Modais</NavLink>
+
+          {/* Submenu Modais */}
+          <details className="menu2">
+            <summary>Modais</summary>
+            <div className="menu2-content">
+              <NavLink to="/modais/ModalPerfil">Modal Perfil</NavLink>
+              <NavLink to="/modais/ModalChamadoUser">Modal Chamado User</NavLink>
+              <NavLink to="/modais/ModalChamadoAdmin">Modal Chamado Admin</NavLink>
+            </div>
+          </details>
+
           <NavLink to="/Setores">Setores</NavLink>
           <NavLink to="/Chamados">Chamados</NavLink>
           <NavLink to="/Historico">Histórico</NavLink>
@@ -78,12 +93,11 @@ export default function App() {
           <details className="menu2">
             <summary>Componentes</summary>
             <div className="menu2-content">
-              <NavLink to="/componentes/Aside" className="check">Aside</NavLink>
+              <NavLink to="/componentes/Aside">Aside</NavLink>
               <NavLink to="/componentes/Footer">Footer</NavLink>
-              <NavLink to="/componentes/Header" className="check">Header</NavLink>
+              <NavLink to="/componentes/Header">Header</NavLink>
               <NavLink to="/componentes/Form">Form</NavLink>
               <NavLink to="/componentes/Notification">Notification</NavLink>
-
             </div>
           </details>
         </nav>

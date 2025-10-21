@@ -32,11 +32,11 @@ export default function Header({ isAdmin = true, userName = "Informática" }) {
                 read: false,
             }))
             : [
-                {
-                    id: 1,
-                    title: "Recuperar código de entrada no setor TI",
-                    read: false,
-                },
+                // {
+                //     id: 1,
+                //     title: "Recuperar código de entrada no setor TI",
+                //     read: false,
+                // },
             ];
         setNotifications(mock);
     }, [isAdmin]);
